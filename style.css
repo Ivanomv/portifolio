@@ -123,23 +123,12 @@ html{
     cursor: pointer;
     display: none;
 }
-/*sessao sobre*/
+/*codigos similares*/
 section {
     padding: 100px 0;
 }
 
-.about {
-    font-family: 'Roboto', sans-serif;
-}
-
-.about .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.about .title {
+section .title {
     font-family: 'Ubutun', sans-serif;
     text-align: center;
     font-size: 40px;
@@ -149,7 +138,7 @@ section {
     position: relative;
 }
 
-.about .title::before {
+section .title::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -159,8 +148,8 @@ section {
     background: #111;
     transform: translateX(-50%);
 }
-.about .title::after {
-    content: "Quem sou eu";
+
+section .title::after {
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -169,6 +158,72 @@ section {
     color: #00804b;
     padding: 5px;
     transform: translateX(-50%);
+}
+/*sessao sobre*/
+
+.about, .services {
+    font-family: 'Roboto', sans-serif;
+}
+
+.about .about-content, 
+.services .serv-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* sessão serviços*/
+.services {
+   background:#111;
+   color: #fff;
+}
+
+.services .title::before{
+    background: #fff;
+}
+
+
+.services .title::after{
+    background: #111;
+content: "Que oferecemos";
+}
+
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover{
+    background: #00804b;
+}
+
+.services .serv-content .card .box{
+transition: all 0.3s ease; 
+}
+
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.services .serv-content .card ion-icon{
+font-size: 70px;
+color: #00804b;
+}
+
+.services .serv-content .card .text{
+font-size: 25px;
+font-weight: 500;
+margin: 10px 0 7px 0 ;
+}
+
+.about.title::after {
+content: "quem sou eu";
 }
 
 .about .about-content .left img {
